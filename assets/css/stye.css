@@ -1,0 +1,106 @@
+/* css/style.css */
+
+/* HTML ve Body için temel ayarlar - Footer'ı alta sabitlemek için KRİTİK! */
+html {
+    height: 100%; /* HTML'in tam ekran yüksekliğini kaplamasını sağlar */
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa; /* Hafif gri arka plan */
+    min-height: 100%; /* Body'nin en az %100 yükseklikte olmasını sağlar */
+    display: flex; /* Flexbox kullanarak içerikleri düzenle */
+    flex-direction: column; /* İçerikleri dikey olarak sırala */
+    margin: 0; /* Tarayıcıların varsayılan margin'lerini kaldırır */
+    padding: 0; /* Tarayıcıların varsayılan padding'lerini kaldırır */
+}
+
+/* Navbar stilleri */
+.navbar-brand {
+    font-weight: bold;
+    color: #4CAF50 !important; /* Marka rengi - Yeşil */
+}
+
+.btn-primary {
+    background-color: #4CAF50; /* Ana düğme rengi - Yeşil */
+    border-color: #4CAF50;
+}
+
+.btn-primary:hover {
+    background-color: #45a049;
+    border-color: #45a049;
+}
+
+/* Ürün kartları stilleri */
+.card {
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* Ana içerik alanının kalan tüm dikey boşluğu kaplamasını sağlar */
+/* Bu KRİTİK BÖLÜM, footer'ı aşağı itmek için boş alanı doldurur */
+#main-content-area {
+    flex-grow: 1; /* Bu, ana içerik alanının mevcut tüm dikey boşluğu doldurmasını sağlar */
+    /* Opsiyonel: Eğer içerik ve footer arasında ekstra boşluk istersen padding ekleyebilirsin */
+    /* padding-bottom: 30px; */
+}
+
+/* Footer için güncellenmiş stiller */
+.footer {
+    background-color: #343a40; /* Navbar ile aynı koyu gri arka plan */
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    /* Footer'ın kendisi otomatik olarak flex öğesi olarak hizalanır */
+    width: 100%; /* Sayfanın tam genişliğini kapla */
+    /* margin-top: auto; buraya gerek yok çünkü main-content-area büyüyor */
+}
+
+/* Favori butonu için stil */
+.favorite-btn.active {
+    color: #ffc107; /* Sarı yıldız */
+}
+
+footer {
+    height: 50px;
+    bottom: 0;
+}
+
+
+
+ /* Slider için özel CSS */
+        .carousel-item {
+            height: 500px; /* Slider yüksekliği */
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            color: white; /* Metin rengi */
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.7); /* Metin gölgesi */
+        }
+        .carousel-caption {
+            background-color: rgba(0, 0, 0, 0.4); /* Arka plan karartma */
+            padding: 20px;
+            border-radius: 8px;
+            position: absolute;
+            bottom: 20%; /* Alt kısımdan biraz yukarıda */
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80%; /* Genişlik */
+            max-width: 800px; /* Maksimum genişlik */
+        }
+        .carousel-caption h5 {
+            font-size: 2.5rem; /* Başlık boyutu */
+            font-weight: bold;
+        }
+        .carousel-caption p {
+            font-size: 1.2rem; /* Açıklama boyutu */
+        }
+        .carousel-link {
+            cursor: pointer; /* Tıklanabilir olduğunu belirtir */
+        }
